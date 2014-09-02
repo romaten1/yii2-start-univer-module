@@ -67,6 +67,14 @@ class m140526_193041_create_moduleuniver_tbl extends Migration
             'visited' => 'tinyint(5) NOT NULL DEFAULT 0',
             ], $tableOptions);
 
+        // Job table
+        $this->createTable('{{%job}}', [
+            'id' => Schema::TYPE_PK,
+            'title' => Schema::TYPE_STRING . '(255) NOT NULL',
+            'title_en' => Schema::TYPE_STRING . '(255) NOT NULL',
+            'type' => 'tinyint(2) NOT NULL DEFAULT 0',
+            ], $tableOptions);
+
         // Science_statuses table
         $this->createTable('{{%science_status}}', [
             'id' => Schema::TYPE_PK,
@@ -93,6 +101,7 @@ class m140526_193041_create_moduleuniver_tbl extends Migration
         $this->dropTable('{{%cafedra}}');
         $this->dropTable('{{%faculty}}');
         $this->dropTable('{{%prepod}}');
+        $this->dropTable('{{%job}}');
         $this->dropTable('{{%science_status}}');
         $this->dropTable('{{%subject}}');
     }
