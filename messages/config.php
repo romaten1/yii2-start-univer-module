@@ -3,7 +3,7 @@
 return [
     'sourcePath' => dirname(__DIR__),
     'messagePath' => __DIR__,
-    'languages' => ['en', 'ru', 'ua'],
+    'languages' => ['en', 'ru'],
     'translator' => 'Module::t',
     'sort' => false,
     'overwrite' => true,

@@ -1,6 +1,6 @@
 <?php
 
-namespace romaten1\univer\models;
+namespace romaten1\univer\models\query;
 
 use vova07\users\traits\ModuleTrait;
 use yii\db\ActiveQuery;

@@ -118,6 +118,7 @@ class Module extends \yii\base\Module
         } else {
             $this->setViewPath('@romaten1/univer/views/frontend');
         }
+        $this->registerTranslations();
     }
 
     /**
@@ -132,5 +133,19 @@ class Module extends \yii\base\Module
         }
 
         return $this->_isBackend;
+    }
+
+    public function registerTranslations()
+    {
+        Yii::$app->i18n->translations['romaten1/univer/*'] = [
+            'class' => 'yii\i18n\PhpMessageSource',
+            'sourceLanguage' => 'en-US',
+            'basePath' => '@romaten1/univer/messages',
+            'fileMap' => [
+                'romaten1/univer' => 'univer.php',
+                
+                
+            ],
+        ];
     }
 }
