@@ -35,7 +35,7 @@ use yii\widgets\ActiveForm;
     
     <div class="row">
         <div class="col-sm-12">
-            <?= $form->field($model, 'faculty_id')->dropDownList($facultyArray) ?>
+            <?= $form->field($model, 'faculty_id') //->dropDownList($facultyArray) ?>
 
         </div>
     </div>

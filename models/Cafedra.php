@@ -50,9 +50,9 @@ class Cafedra extends \yii\db\ActiveRecord
     public function behaviors()
     {
         return [
-            'timestampBehavior' => [
+            /*'timestampBehavior' => [
                 'class' => TimestampBehavior::className(),
-            ],
+            ],*/
             'sluggableBehavior' => [
                 'class' => SluggableBehavior::className(),
                 'attribute' => 'title',

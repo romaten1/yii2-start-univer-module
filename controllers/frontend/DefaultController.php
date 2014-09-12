@@ -1,6 +1,6 @@
 <?php
 
-namespace vova07\blogs\controllers\frontend;
+namespace romaten1\univer\controllers\frontend;
 
 use romaten1\univer\models\frontend\Cafedra;
 use yii\data\ActiveDataProvider;

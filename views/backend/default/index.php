@@ -53,7 +53,6 @@ $this->params['breadcrumbs'] = [
                                 );
                             }
                     ],
-                    'views',
                     [
                         'attribute' => 'active',
                         'format' => 'html',

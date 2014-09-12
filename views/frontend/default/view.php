@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Blog page view.
+ * Cafedra page view.
  *
  * @var \yii\web\View $this View
- * @var \vova07\blogs\models\frontend\Blog $model Model
+ * @var \romaten1\univer\models\frontend\Blog $model Model
  */
 
-use vova07\blogs\Module;
+use romaten1\univer\Module;
 use yii\helpers\Html;
 
 $this->title = $model['title'];
 $this->params['breadcrumbs'] = [
     [
-        'label' => Module::t('blogs', 'BACKEND_INDEX_TITLE'),
+        'label' => Module::t('univer', 'BACKEND_INDEX_TITLE'),
         'url' => ['index']
     ],
     $this->title
@@ -46,7 +46,7 @@ $this->params['breadcrumbs'] = [
     <div class="col-sm-8 col-sm-pull-4">
         <div class="blog">
             <div class="blog-item">
-                <?php if ($model->preview_url) : ?>
+                <?php if ($model->image_id) : ?>
                     <?= Html::img(
                         $model->urlAttribute('preview_url'),
                         ['class' => 'img-responsive img-blog', 'width' => '100%', 'alt' => $model->title]
@@ -54,12 +54,8 @@ $this->params['breadcrumbs'] = [
                 <?php endif; ?>
                 <div class="blog-content">
                     <h3><?= $model->title ?></h3>
-                    <div class="entry-meta">
-                        <span>
-                            <i class="icon-calendar"></i> <?= $model->created ?>
-                        </span>
-                    </div>
-                    <?= $model->content ?>
+                    
+                    <?= $model->description; ?>
                 </div>
             </div><!--/.blog-item-->
         </div>

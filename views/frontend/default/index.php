@@ -7,10 +7,10 @@
  * @var \yii\data\ActiveDataProvider $dataProvider DataProvider
  */
 
-use vova07\blogs\Module;
+use romaten1\univer\Module;
 use yii\widgets\ListView;
 
-$this->title = Module::t('blogs', 'FRONTEND_INDEX_TITLE');
+$this->title = Module::t('univer', 'FRONTEND_INDEX_TITLE');
 $this->params['breadcrumbs'][] = $this->title; ?>
 <div class="row">
 
